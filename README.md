@@ -1,18 +1,17 @@
-<p align="center">
-  <a href="#project">Project</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+## Project
+
+This Ignite challenge by [Rocketseat](https://rocketseat.com.br), was to develop a blog application using JAMStack.
+
+<p>
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#how-to-use">How to use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=32B768&labelColor=0A1033">
+<p>
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=ff57b2&labelColor=0A1033">
 
- <img src="https://img.shields.io/static/v1?label=NLW&message=05&color=32B768&labelColor=0A1033" alt="NLW 05" />
+ <img src="https://img.shields.io/static/v1?label=Ignite&message=Rocketseat&color=ff57b2&labelColor=0A1033" alt="Ignite Rocketseat" />
 </p>
-
-## Project
-
-The Ignite challenge by [Rocketseat](https://rocketseat.com.br), was to develop a blog application using JAMStack.
 
 ![cover](.github/cover.png?style=flat)
 
@@ -25,6 +24,7 @@ The Ignite challenge by [Rocketseat](https://rocketseat.com.br), was to develop 
 - SASS
 - Date-fns
 - React-icons
+- Utteranc
 
 ## How to use
 
