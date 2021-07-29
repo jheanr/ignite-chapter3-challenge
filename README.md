@@ -34,7 +34,7 @@ Clone the project and access the folder.
 $ git clone https://github.com/jheanr/ignite-chapter3-challenge.git && cd ignite-chapter3-challenge
 ```
 
-Before running the project, you must have created your [Prismic](https://prismic.io) project and get your `PRISMIC_API_ENDPOINT` and `PRISMIC_ACCESS_TOKEN` to set the environments variables on `.env.example`, rename it after the changes to `.env.local`.
+Before running the project, you must have created your [Prismic](https://prismic.io) project and get your `API_ENDPOINT` and `ACCESS_TOKEN` to set the environments variables on `.env.example`, rename it after the changes to `.env.local`.
 
 ```shell
 PRISMIC_API_ENDPOINT=
