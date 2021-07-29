@@ -1,0 +1,20 @@
+.previewButton {
+  background: var(--gray-50);
+  border-radius: 4px;
+  color: var(--gray-900);
+  font-style: 1.125rem;
+  font-weight: 600;
+  height: 3.625rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--gray-150);
+  }
+}

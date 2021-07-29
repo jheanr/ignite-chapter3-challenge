@@ -7,7 +7,9 @@ import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 
-import Header from '../components/Header';
+import { Header } from '../components/Header';
+import { PreviewButton } from '../components/PreviewButton';
+
 import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
@@ -30,9 +32,10 @@ interface PostPagination {
 
 interface HomeProps {
   postsPagination: PostPagination;
+  preview: boolean;
 }
 
-export default function Home({ postsPagination }: HomeProps) {
+export default function Home({ postsPagination, preview }: HomeProps) {
   const [posts, setPosts] = useState<PostPagination>(postsPagination);
 
   function handleLoadMorePosts(nextPage: string): void {
@@ -111,12 +114,17 @@ export default function Home({ postsPagination }: HomeProps) {
             Carregar mais posts
           </button>
         )}
+
+        {preview && <PreviewButton />}
       </div>
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview = false,
+  previewData,
+}) => {
   const prismic = getPrismicClient();
 
   const postsResponse = await prismic.query(
@@ -124,6 +132,7 @@ export const getStaticProps: GetStaticProps = async () => {
     {
       fetch: ['posts.title', 'posts.subtitle', 'posts.author'],
       pageSize: 1,
+      ref: previewData?.ref ?? null,
     }
   );
 
@@ -145,6 +154,7 @@ export const getStaticProps: GetStaticProps = async () => {
         results: posts,
         next_page: postsResponse.next_page,
       },
+      preview,
     },
     revalidate: 60 * 60 * 24, // 24 hours
   };
